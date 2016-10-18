@@ -88,4 +88,6 @@ ENV/
 # Rope project settings
 .ropeproject
 
-./autograder-master
+.local_settings.ini
+
+*.swp
