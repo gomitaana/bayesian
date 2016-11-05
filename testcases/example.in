@@ -1,0 +1,16 @@
+[Nodes]
+NoParents, Alcohol, Drugs
+
+[Probabilities]
++NoParents = 0.001
++Alcohol = 0.002
++Drugs|+Alcohol,+NoParents = 0.95
++Drugs|-Alcohol, +NoParents = 0.94
++Drugs|+Alcohol, -NoParents = 0.29
++Drugs|-Alcohol, -NoParents = 0.001
+
+[Queries]
++NoParents|+Alcohol
++Alcohol
+-Drugs|-Alcohol, +NoParents
+-Drugs|-Alcohol, -NoParents
